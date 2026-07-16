@@ -1,0 +1,14 @@
+---
+title: "01_assembly"
+author: "Kaushik Surej"
+date: "2026-07-15"
+output: html_document
+---
+
+# Step 1
+## Running the fastq file within the flye directory helps in assembling a long-read metagenomic sequencing data within the metagenome mode
+## Nanopore reads produced at a high quality. Threads 12 that have been allowed to run allows parallel processing to improve computational efficiency
+
+```bash
+flye --nano-hq ../raw_data/bbd_0.1.fastq.gz --threads 12 --out-dir bbd --meta
+```
