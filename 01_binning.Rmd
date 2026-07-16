@@ -1,0 +1,18 @@
+---
+title: "01_binning"
+author: "Kaushik Surej"
+date: "2026-07-15"
+output: html_document
+---
+
+## Step 2: Binning of the programme with metabat
+```bash
+metabat2 -i assembly_bbd_ordered.fasta -a depths_bbd.txt --cvExt -o bins_bbd/metabat --seed 5
+```
+### Binning with metabat is considered as an important step because it helps in grouping contigs that are likely to originate withtin the bacterial genome
+### The results that have been produced is a collection of metagenome assembled genomes called (MAGs) which might or might not represent a particular species or population present
+
+## Step 3: Bin quality with checkm
+```bash
+samtools faidx ../flye/bbd/assembly.fasta contig_116 > bins_bbd/contig_116.fa
+```
