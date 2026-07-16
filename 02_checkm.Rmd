@@ -1,0 +1,11 @@
+---
+title: "02_checkm"
+author: "Kaushik Surej"
+date: "2026-07-15"
+output: html_document
+---
+
+## Step 4: Selection of bins based on the extracted checkm results
+### Assessing the quality of the MAGs with the help of checkm shows us that completeness and the level of contimination found within the genome bin using lineage-specific marker genes, allowing the identification of high-quality bins suitable for downstream analyses
+
+# The major reason as to why the step was run is to understand that the taxonomic classification of bacteria found within the research has been classified only until the genus level rather than having a complete txonomic classification of the organism up until the family, class or phylum level
