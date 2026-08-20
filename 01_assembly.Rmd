@@ -6,9 +6,19 @@ output: html_document
 ---
 
 # Step 1
-## Running the fastq file within the flye directory helps in assembling a long-read metagenomic sequencing data within the metagenome mode
-## Nanopore reads produced at a high quality. Threads 12 that have been allowed to run allows parallel processing to improve computational efficiency
+Running the fastq file within the flye directory helps in assembling a long-read metagenomic sequencing data within the metagenome mode
+
+Nanopore reads produced at a high quality. Threads 12 that have been allowed to run allows parallel processing to improve computational efficiency
 
 ```bash
 flye --nano-hq ../raw_data/bbd_0.1.fastq.gz --threads 12 --out-dir bbd --meta
 ```
+
+## Understanding The Genomic Assembly Stats:
+
+Upon the completion of the flye, the assembly_info.txt file is used for assessing the quality of the metagenome assembly. 
+
+This provides us with information such as:
+1)  no.of contigs= 7980
+2) largest contig= contig116
+3) total assembly length= 4706700
