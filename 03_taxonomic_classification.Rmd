@@ -1,0 +1,31 @@
+---
+title: "03_taxanomic_classification"
+author: "Kaushik Surej"
+date: "2026-07-16"
+output: html_document
+---
+
+## Step 5: Understanding the taxonomic classification of the bacterial samples with the help of gtdbtk
+
+Using gtdbtk helps in comparing each genome against the Genome Taxonomy Database (gtdb) using phylogenetic markers marker genes for determining its taxonomic placement
+
+```bash 
+
+gtdbtk classify_wf -x fa --cpus 2 --genome_dir genomes --out_dir out --skip_ani_screen
+```
+
+The bash chunk mentioned in line 12 represents the potential symbiotic classification of the coral based on the largest assembled contig and the bin it was classified under
+
+```bash
+while read bin;do echo $bin;done < ../checkm/bbd_topbins.txt
+
+while read bin;do echo "../metabat/bins_bbd/${bin}.fa";done < ../checkm/bbd_topbins.txt
+
+while read bin;do cp "../metabat/bins_bbd/${bin}.fa" genomes;done < ../checkm/bbd_topbins.txt
+```
+
+As an external software tool, gtdbtk (Genome Database Taxonomy Toolkit), it gave a precise classification for the identified bacterial class/classes and MAGs which were recovered as lesions from the body of the coral against a standardized taxonomic classification of different groups/taxa
+
+Metabat57 = Noted as a cyanobacteria species belonging to the genus Roseofilum; From research that have been carried out this cyanobacteria is one of the classes which have been known for photosynthesizing within the fragments of the disease affected coral, leading to the formation of the pigment rings around the coral's body
+
+contig_116 = Belongs to the phylum Bacteriodota and these are the taxa that help in the breakdown of organic matter within the coral colony, such as the breakdown of live coral tissue into dead tissues; Acts as decomposers
