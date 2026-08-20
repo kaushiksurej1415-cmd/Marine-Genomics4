@@ -1,0 +1,20 @@
+---
+title: "04_gene_annotation"
+author: "Kaushik Surej"
+date: "2026-07-16"
+output: html_document
+---
+
+# Step 6: Finding and annotating the available genome with prokka
+
+Gene prediction as a process can be studies and clarified using prokka because it helps you predict genomic varieties such as protein-coding genes, tRNAs, rRNAs and other functional elements for the sustenance of the bacteria 
+
+Utilization of the prokka programme compares the current set of predicted genes that have been run against the previously curated database of known homologous genes to assign it a gene name and biological function wherever it is possible
+
+```bash
+alias prokka='apptainer run -B /pvol/:/pvol /pvol/data/sif/prokka.sif prokka'
+
+ prokka --outdir $bin --prefix $bin "../metabat/bins_bbd/${bin}.fa";
+
+done < ../checkm/bbd_topbins.txt
+```
