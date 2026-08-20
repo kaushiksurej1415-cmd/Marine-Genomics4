@@ -1,0 +1,33 @@
+---
+title: "05_metabolic_inference"
+author: "Kaushik Surej"
+date: "2026-07-16"
+output: html_document
+---
+
+# Step 7: Cyanobacteria and its uses; 
+
+Inference of separate metabolic pathways based on processes like photosynthesis and sulfate reduction; Tool used= minpath
+
+```bash
+head ../prokka/metabat.57/metabat.57.tsv | awk -F '\t' '{print $1,$5}'
+```
+
+## Questions (4.1):
+1) How many bins contain at least one gene from this pathway?
+2) Which bin has all of the genes (i.e, a complete pathway)?
+
+## Answers (4.1):
+1) 3 bins; namely metabat16, metabat31 and metabat57
+2) metabat57
+
+
+## Questions (4.2):
+1) How many bins contain the pathway PWY-5360?
+2) What family (in a taxonomic sense) do these bins belong to?
+
+## Answers (4.2):
+1) 3 bins; namely metabat42, metabat9 and metabat31
+2)  - metabat42: Desulfovibrionaceae
+    - metabat9: Desulforegulaceae
+    - metabat31: Desulforegulaceae
