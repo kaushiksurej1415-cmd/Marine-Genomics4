@@ -6,6 +6,36 @@ output: html_document
 ---
 
 ## Step 4: Selection of bins based on the extracted checkm results
-### Assessing the quality of the MAGs with the help of checkm shows us that completeness and the level of contimination found within the genome bin using lineage-specific marker genes, allowing the identification of high-quality bins suitable for downstream analyses
 
-# The major reason as to why the step was run is to understand that the taxonomic classification of bacteria found within the research has been classified only until the genus level rather than having a complete txonomic classification of the organism up until the family, class or phylum level
+Assessing the quality of the MAGs with the help of checkm shows us that completeness and the level of contamination found within the genome bin using lineage-specific marker genes, allowing the identification of high-quality bins suitable for downstream analyses
+
+The major reason as to why the step was run is to understand that the taxonomic classification of bacteria found within the research has been classified only until the genus level rather than having a complete taxonomic classification of the organism up until the family, class or phylum level
+
+
+```bash
+
+cd checkm
+head checkm_results_bbd.txt 
+```
+The first two lines of codes within the bash chunk suggests the presence of raw MAG results that we have been able to view 
+
+```bash
+
+head -n 20 checkm_results_bbd.txt 
+cat checkm_results_bbd.txt | awk '$13>15'
+cat checkm_results_bbd.txt | awk '$13>15{print $1}'
+cat checkm_results_bbd.txt | awk '$13>15{print $1}' > bbd_topbins.txt
+cat bbd_topbins.txt
+```
+
+### Description:
+Based on the programme that was ran, bins were filtered according to it's completion factor moving beyond 15% and a total of "14" separate bins were captured.
+
+The 14 bins which were segregated and formed are important because these bins were the ones which were moved ahead into the processes of taxonomic classification and gene annotation.
+
+
+- As a side note, bins which had a completion rate of 15% and beyond were the only bins that were chosen for the process of taxonomic classification because for the occurrence of a disease like Black Band Disease, it is important for different taxa to be classified as is.
+
+- Since, it is a disease which affects corals, the symbiotic relationship that corals have with other major and minor phyla is what needs to be studied and looked at.
+
+- Having a bin completion ratio below the 15% threshold means that the fragments which have been observed within the body of the coral could be ones belonging to a taxa that is low in abundance, contributing to the classification of information which might not be reliable for the purpose of having a fully fledged analysis.
